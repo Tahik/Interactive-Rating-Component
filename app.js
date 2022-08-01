@@ -17,13 +17,15 @@ const [
   defaultParagraph,
   ratingList,
   starDiv,
+  starImg,
   submitButton,
 ] = selectors;
 
 export const app = () => {
   const firstDiv = () => {
     div(def, body);
-    image(starDiv, `.${def}`);
+    div(starDiv, `.${def}`);
+    image(starImg, `.${starDiv}`);
     heading1(defaultHeading, `.${def}`, defaultHeadingText);
     paragraph(defaultParagraph, `.${def}`, defaultParagraphText);
     uList(ratingList, `.${def}`);

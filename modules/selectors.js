@@ -5,5 +5,6 @@ export const selectors = [
   "default--paragraph",
   "rating--list",
   "star--div",
+  "star--img",
   "submit--button",
 ];

@@ -7,6 +7,7 @@ export const div = (clName, par) => {
 export const image = (clName, par) => {
   const image = document.createElement("img");
   image.classList.add(clName);
+  image.src = "./sources/icon-star.svg";
   document.querySelector(par).appendChild(image);
 };
 
