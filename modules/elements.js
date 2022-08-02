@@ -1,13 +1,33 @@
+import { selectors } from "./selectors.js";
+const [
+  body,
+  defaultDiv,
+  defaultHeading,
+  defaultParagraph,
+  ratingList,
+  starDiv,
+  starImg,
+  submitButton,
+  activeDiv,
+  thankImage,
+  selectedParagraph,
+  activeHeading,
+  activeParagraph,
+] = selectors;
+
 export const div = (clName, par) => {
   const div = document.createElement("div");
   div.classList.add(clName);
+  if (clName === activeDiv) {
+    div.classList.add("hidden");
+  }
   document.querySelector(par).appendChild(div);
 };
 
-export const image = (clName, par) => {
+export const image = (clName, par, src) => {
   const image = document.createElement("img");
   image.classList.add(clName);
-  image.src = "./sources/icon-star.svg";
+  image.src = src;
   document.querySelector(par).appendChild(image);
 };
 
@@ -43,8 +63,20 @@ export const listItems = (par) => {
 };
 
 export const button = (clName, par) => {
+  const eventTarget1 = document.querySelector(`.${defaultDiv}`);
+  const eventTarget2 = document.querySelector(`.${activeDiv}`);
   const button = document.createElement("button");
   button.classList.add(clName);
   button.textContent = "Submit";
+  button.addEventListener("click", () => {
+    eventTarget1.classList.toggle("hidden");
+    setTimeout(() => {
+      eventTarget1.classList.toggle("hidden");
+    }, 2000);
+    eventTarget2.classList.toggle("hidden");
+    setTimeout(() => {
+      eventTarget2.classList.toggle("hidden");
+    }, 2000);
+  });
   document.querySelector(par).appendChild(button);
 };

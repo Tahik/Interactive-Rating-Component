@@ -7,4 +7,9 @@ export const selectors = [
   "star--div",
   "star--img",
   "submit--button",
+  "active--div",
+  "thank--image",
+  "selected--paragraph",
+  "active--heading",
+  "thank--paragraph",
 ];

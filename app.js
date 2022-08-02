@@ -8,29 +8,52 @@ import {
   button,
   image,
 } from "./modules/elements.js";
-import { defaultHeadingText, defaultParagraphText } from "./modules/text.js";
+import {
+  defaultHeadingText,
+  defaultParagraphText,
+  selectedParagraphText,
+  activeHeadingText,
+  activeParagraphText,
+} from "./modules/text.js";
 
 const [
   body,
-  def,
+  defaultDiv,
   defaultHeading,
   defaultParagraph,
   ratingList,
   starDiv,
   starImg,
   submitButton,
+  activeDiv,
+  thankImage,
+  selectedParagraph,
+  activeHeading,
+  activeParagraph,
 ] = selectors;
+
+const defaultImage = "./sources/icon-star.svg";
+const activeImage = "./sources/illustration-thank-you.svg";
 
 export const app = () => {
   const firstDiv = () => {
-    div(def, body);
-    div(starDiv, `.${def}`);
-    image(starImg, `.${starDiv}`);
-    heading1(defaultHeading, `.${def}`, defaultHeadingText);
-    paragraph(defaultParagraph, `.${def}`, defaultParagraphText);
-    uList(ratingList, `.${def}`);
+    div(defaultDiv, body);
+    div(starDiv, `.${defaultDiv}`);
+    image(starImg, `.${starDiv}`, defaultImage);
+    heading1(defaultHeading, `.${defaultDiv}`, defaultHeadingText);
+    paragraph(defaultParagraph, `.${defaultDiv}`, defaultParagraphText);
+    uList(ratingList, `.${defaultDiv}`);
     listItems(`.${ratingList}`);
-    button(submitButton, `.${def}`);
+    button(submitButton, `.${defaultDiv}`, div);
   };
+
+  const secondDiv = () => {
+    div(activeDiv, body);
+    image(thankImage, `.${activeDiv}`, activeImage);
+    paragraph(selectedParagraph, `.${activeDiv}`, selectedParagraphText);
+    heading1(activeHeading, `.${activeDiv}`, activeHeadingText);
+    paragraph(activeParagraph, `.${activeDiv}`, activeParagraphText);
+  };
+  secondDiv();
   firstDiv();
 };
