@@ -45,6 +45,6 @@ export const listItems = (par) => {
 export const button = (clName, par) => {
   const button = document.createElement("button");
   button.classList.add(clName);
-  button.textContent = "Submit!";
+  button.textContent = "Submit";
   document.querySelector(par).appendChild(button);
 };
