@@ -47,13 +47,14 @@ p {
   width: 85%;
 }
 
-.list--item {
+.list--itemBtn {
   font-family: Overpass, serif;
   font-size: 12px;
   color: #989fa9;
   background-color: #272e38;
   height: 40px;
   width: 40px;
+  border: none;
   border-radius: 20px;
   display: flex;
   justify-content: center;
@@ -61,12 +62,12 @@ p {
 }
 
 /* toto iba pre monitory */
-.list--item:hover {
+.list--itemBtn:hover {
   color: white;
   background-color: #989fa9;
 }
 
-.list--item:active {
+.list--itemBtn:active {
   color: white;
   background-color: #fc7613;
 }

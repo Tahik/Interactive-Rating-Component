@@ -15,6 +15,8 @@ const [
   activeParagraph,
 ] = selectors;
 
+import { selectedParagraphText } from "./text.js";
+
 export const div = (clName, par) => {
   const div = document.createElement("div");
   div.classList.add(clName);
@@ -55,10 +57,25 @@ export const listItems = (par) => {
   const nums = ["1", "2", "3", "4", "5"];
   nums.forEach((num) => {
     const listItem = document.createElement("li");
-    listItem.classList.add(`list--item`);
+    listItem.classList.add("list--item");
     listItem.classList.add(num);
-    listItem.innerHTML += num;
+    // listItem.textContent += num;
     document.querySelector(par).appendChild(listItem);
+    const listItemBtn = document.createElement("button");
+    listItemBtn.classList.add("list--itemBtn");
+    listItem.appendChild(listItemBtn);
+    listItemBtn.textContent += num;
+    listItemBtn.addEventListener("click", () => {
+      let txtNmb = num;
+      let youSelectedText = `You selected ${txtNmb} out of 5`;
+      if (!txtNmb) {
+        document.querySelector(`.${selectedParagraph}`).textContent =
+          selectedParagraphText;
+      } else {
+        document.querySelector(`.${selectedParagraph}`).textContent =
+          youSelectedText;
+      }
+    });
   });
 };
 
@@ -76,6 +93,8 @@ export const button = (clName, par) => {
     eventTarget2.classList.toggle("hidden");
     setTimeout(() => {
       eventTarget2.classList.toggle("hidden");
+      const myInput = document.querySelector(".selected--paragraph");
+      myInput.textContent = selectedParagraphText;
     }, 2000);
   });
   document.querySelector(par).appendChild(button);

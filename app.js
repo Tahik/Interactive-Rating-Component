@@ -16,6 +16,8 @@ import {
   activeParagraphText,
 } from "./modules/text.js";
 
+// import { listItems, listItemBtn } from "./modules/liandbtn.js";
+
 const [
   body,
   defaultDiv,
@@ -43,6 +45,7 @@ export const app = () => {
     heading1(defaultHeading, `.${defaultDiv}`, defaultHeadingText);
     paragraph(defaultParagraph, `.${defaultDiv}`, defaultParagraphText);
     uList(ratingList, `.${defaultDiv}`);
+    // listItemBtn(`.${ratingList}`);
     listItems(`.${ratingList}`);
     button(submitButton, `.${defaultDiv}`, div);
   };
