@@ -89,13 +89,13 @@ export const button = (clName, par) => {
     eventTarget1.classList.toggle("hidden");
     setTimeout(() => {
       eventTarget1.classList.toggle("hidden");
-    }, 10000);
+    }, 3000);
     eventTarget2.classList.toggle("hidden");
     setTimeout(() => {
       eventTarget2.classList.toggle("hidden");
       const myInput = document.querySelector(".selected--paragraph");
       myInput.textContent = selectedParagraphText;
-    }, 10000);
+    }, 3000);
   });
   document.querySelector(par).appendChild(button);
 };
