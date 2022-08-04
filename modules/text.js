@@ -4,4 +4,4 @@ export const defaultParagraphText =
 export const selectedParagraphText = "Please select rating.";
 export const activeHeadingText = "Thank you!";
 export const activeParagraphText =
-  "We appreciate you taking time to give a rating. If you ever need more support, don't hesitate to get in touch";
+  "We appreciate you taking time to give a rating. If you ever need more support, don't hesitate to get in touch!";

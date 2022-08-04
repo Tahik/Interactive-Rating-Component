@@ -18,24 +18,43 @@ div {
   flex-direction: column;
   align-items: center;
   border-radius: 20px;
-  width: 90%;
+  height: 337.5px;
 }
 
 h1 {
   font-family: Overpass, serif;
   font-weight: 400;
+  font-size: 22px;
   color: white;
+  align-self: flex-start;
+  margin-left: 23px;
 }
 
 p {
   font-family: Overpass, serif;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 13.5px;
+  line-height: 22px;
   color: hsl(217, 12%, 63%);
   width: 85%;
+  margin-top: -5px;
+}
+
+/* default state css */
+
+.default--paragraph {
+  text-align: left;
 }
 
 .star--div {
+  width: 42px;
+  height: 42px;
+  background-color: #272e38;
+  display: flex;
+  justify-content: center;
+  align-self: flex-start;
+  margin-top: 25px;
+  margin-left: 23px;
 }
 
 .rating--list {
@@ -45,6 +64,7 @@ p {
   display: inline-flex;
   justify-content: space-between;
   width: 85%;
+  margin-bottom: 24px;
 }
 
 .list--itemBtn {
@@ -52,16 +72,15 @@ p {
   font-size: 12px;
   color: #989fa9;
   background-color: #272e38;
-  height: 40px;
-  width: 40px;
+  width: 42px;
+  height: 42px;
   border: none;
-  border-radius: 20px;
+  border-radius: 21px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* toto iba pre monitory */
 .list--itemBtn:hover {
   color: white;
   background-color: #989fa9;
@@ -74,13 +93,14 @@ p {
 
 .submit--button {
   font-family: Overpass, serif;
+  font-size: 12px;
   background-color: #fc7613;
   text-transform: uppercase;
-  height: 45px;
   width: 85%;
   border: none;
   border-radius: 23px;
   color: white;
+  letter-spacing: 3px;
   margin-bottom: 25px;
 }
 
@@ -89,6 +109,60 @@ p {
   background-color: white;
 }
 
+/* active state css */
+
+.active--heading {
+  align-self: center;
+}
+.thank--paragraph {
+  text-align: center;
+}
+
+.thank--image {
+  margin-top: 36px;
+  width: 136px;
+}
+.selected--paragraph {
+  background-color: #272e38;
+  color: #fc7613;
+  width: 180px;
+  height: 32px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  margin-top: 20px;
+}
+
 .hidden {
   display: none;
+}
+
+@media only screen and (max-width: 375px) {
+  div {
+    width: 90%;
+  }
+  .submit--button {
+    height: 55px;
+  }
+}
+
+@media only screen and (min-width: 376px) and (max-width: 1440px) {
+  div {
+    width: 345px;
+  }
+
+  .submit--button {
+    height: 36px;
+  }
+}
+
+@media only screen and (min-width: 1441px) {
+  div {
+    width: 345px;
+  }
+
+  .submit--button {
+    height: 36px;
+  }
 }
