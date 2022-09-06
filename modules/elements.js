@@ -59,7 +59,6 @@ export const listItems = (par) => {
     const listItem = document.createElement("li");
     listItem.classList.add("list--item");
     listItem.classList.add(num);
-    // listItem.textContent += num;
     document.querySelector(par).appendChild(listItem);
     const listItemBtn = document.createElement("button");
     listItemBtn.classList.add("list--itemBtn");
