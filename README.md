@@ -44,7 +44,7 @@ Users should be able to:
 
 ### What I learned
 
-My goal was to build this small app using vanilla JavaScript. I know some of my solutions might be little bit quirky but my aim was, as exercise, to create functioning solutions.
+My goal was to build this small app using vanilla JavaScript. I know it is not very elegant by I was aiming for working solutions. Any constructive criticism is apreciated.
 
 ## Author
 
