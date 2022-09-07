@@ -28,6 +28,11 @@ Users should be able to:
 
 ### Screenshot
 
+![Interactive_Rating_Component_default_mobile](https://user-images.githubusercontent.com/88402992/188963202-cf7b58e6-3c30-4b40-80eb-85b29cb6501d.jpg)
+![Interactive_Rating_Component_default_desktop](https://user-images.githubusercontent.com/88402992/188963264-3da52fb7-b66f-41a3-a6e3-19fcfa88da48.jpg)
+![Interactive_Rating_Component_active_desktop](https://user-images.githubusercontent.com/88402992/188963338-b7b03f12-b273-4803-8203-bacd081dea22.jpg)
+![Interactive_Rating_Component_select_rating_desktop](https://user-images.githubusercontent.com/88402992/188963424-d31c4eff-2acd-4a05-a9b6-2b3176d86a34.jpg)
+
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
