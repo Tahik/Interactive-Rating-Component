@@ -31,7 +31,7 @@ const [
   thankImage,
   selectedParagraph,
   activeHeading,
-  activeParagraph,
+  thankParagraph,
 ] = selectors;
 
 const defaultImage = "./sources/icon-star.svg";
@@ -45,7 +45,7 @@ export const app = () => {
     heading1(defaultHeading, `.${defaultDiv}`, defaultHeadingText);
     paragraph(defaultParagraph, `.${defaultDiv}`, defaultParagraphText);
     uList(ratingList, `.${defaultDiv}`);
-    // listItemBtn(`.${ratingList}`);
+
     listItems(`.${ratingList}`);
     button(submitButton, `.${defaultDiv}`, div);
   };
@@ -55,7 +55,7 @@ export const app = () => {
     image(thankImage, `.${activeDiv}`, activeImage);
     paragraph(selectedParagraph, `.${activeDiv}`, selectedParagraphText);
     heading1(activeHeading, `.${activeDiv}`, activeHeadingText);
-    paragraph(activeParagraph, `.${activeDiv}`, activeParagraphText);
+    paragraph(thankParagraph, `.${activeDiv}`, activeParagraphText);
   };
   secondDiv();
   firstDiv();

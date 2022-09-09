@@ -12,7 +12,7 @@ const [
   thankImage,
   selectedParagraph,
   activeHeading,
-  activeParagraph,
+  thankParagraph,
 ] = selectors;
 
 import { selectedParagraphText } from "./text.js";
@@ -92,8 +92,6 @@ export const button = (clName, par) => {
     eventTarget2.classList.toggle("hidden");
     setTimeout(() => {
       eventTarget2.classList.toggle("hidden");
-      const myInput = document.querySelector(".selected--paragraph");
-      myInput.textContent = selectedParagraphText;
     }, 3000);
   });
   document.querySelector(par).appendChild(button);
