@@ -26,9 +26,10 @@ export const div = (clName, par) => {
   document.querySelector(par).appendChild(div);
 };
 
-export const image = (clName, par, src) => {
+export const image = (clName, par, src, alt) => {
   const image = document.createElement("img");
   image.classList.add(clName);
+  image.alt = alt;
   image.src = src;
   document.querySelector(par).appendChild(image);
 };

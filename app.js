@@ -41,7 +41,7 @@ export const app = () => {
   const firstDiv = () => {
     div(defaultDiv, body);
     div(starDiv, `.${defaultDiv}`);
-    image(starImg, `.${starDiv}`, defaultImage);
+    image(starImg, `.${starDiv}`, defaultImage, "star image");
     heading1(defaultHeading, `.${defaultDiv}`, defaultHeadingText);
     paragraph(defaultParagraph, `.${defaultDiv}`, defaultParagraphText);
     uList(ratingList, `.${defaultDiv}`);
@@ -52,7 +52,7 @@ export const app = () => {
 
   const secondDiv = () => {
     div(activeDiv, body);
-    image(thankImage, `.${activeDiv}`, activeImage);
+    image(thankImage, `.${activeDiv}`, activeImage, "thank image");
     paragraph(selectedParagraph, `.${activeDiv}`, selectedParagraphText);
     heading1(activeHeading, `.${activeDiv}`, activeHeadingText);
     paragraph(thankParagraph, `.${activeDiv}`, activeParagraphText);
